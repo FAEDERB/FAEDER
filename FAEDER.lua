@@ -1466,7 +1466,7 @@ if Chat_Type == 'pv' then
 if text == '/start' and faeder11(msg) then    
 if not faederdx1:get(FAEDER..'Start:Time'..msg.sender_user_id_) then
 local inline = {{{text="المطور",url="t.me/"..(SudoFaeder or "LAW_RZ")}}}
-local Sudo_Welcome = '❅∫ يمكنك ايضا استخدام الاوامر الخدميه \n❅∫ اليك ازرار الاوامر الخدميه اسفل الرساله\n                  • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n                              [𝐅𝐀𝐄𝐃𝐄𝐑 - 𝐂𝐇](https://t.me/LAW_RZ)'
+local Sudo_Welcome = '❅∫ يمكنك ايضا استخدام الاوامر الخدميه \n❅∫ اليك ازرار الاوامر الخدميه اسفل الرساله\n                  • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n                              [𝗥𝗔𝗛𝗠𝗔𝗡 - 𝐂𝐇](https://t.me/LAW_RZ)'
 local key = {
 {'زخرفه','احسب عمرك'},
 {'الابراج','نسبه الحب'},
@@ -8404,7 +8404,7 @@ local TXTAR = "❅∫ اعدادات المجموعه 🔻 :\n         • ┉ �
 .."❅∫ خاصيه التكرار ، "..floodstatus.."\n"
 .."❅∫ عدد التكرار ، [ "..flood_m.." ]\n"
 .."️❅∫ عدد السبام ، [ "..spam_c.." ]\n"
-.."         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❅∫ [𝐅𝐀𝐄𝐃𝐄𝐑 - 𝐂𝐇](https://t.me/LAW_RZ)\n"
+.."         • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ • ┉ •\n❅∫ [𝗥𝗔𝗛𝗠𝗔𝗡 - 𝐂𝐇](https://t.me/LAW_RZ)\n"
 faederdx(msg.chat_id_, msg.id_, 1, TXTAR, 1, 'md')
 end end 
 --     By Developer Faeder     --
@@ -9780,7 +9780,7 @@ end
 if text == "تحديث السورس" and is_leader(msg) then 
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ جاري تحديث السورس الى الاصدار الجديد ', 1, 'md') 
 os.execute('rm -rf FAEDER.lua') 
-os.execute('wget https://raw.githubusercontent.com/TEAMFAEDER/FAEDER/master/FAEDER.lua') 
+os.execute('wget https://raw.githubusercontent.com/FAEDERB/FAEDER/master/FAEDER.lua') 
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم تحديث السورس اكتشف المميزات الجديده الان ', 1, 'md') 
 dofile('FAEDER.lua')
 io.popen("rm -rf ~/.telegram-cli/data/audio/*")
