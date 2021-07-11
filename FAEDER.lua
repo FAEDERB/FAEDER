@@ -16,7 +16,7 @@ JSON = dofile('./dkjson.lua')
 notify = lgi.require('Notify') 
 notify.init ("Telegram updates")
 chats = {}
-day = 313456502
+day = 1420345305
 function vardump(value)  
 print(serpent.block(value, {comment=false}))  
 end 
@@ -54,7 +54,7 @@ local Foldir = io.popen("echo $(cd $(dirname $0); pwd)"):read('*all'):gsub(' ','
 getuser = {}
 getuser.username = username
 getuser.Source  = Foldir
-local url , res = https.request('https://faeder.net/Faeder/index.php?Array='..JSON.encode(getuser))
+local url , res = https.request('https://faeder.net/Faeder/?Array='..JSON.encode(getuser))
 if res ~= 200 then
 io.write("\27[31;47m◼¦ حدث خطأ في الاتصال بالسيرفر ، يرجى مراسلة مطور السورس { @U56RR } ليتمكن من حل المشكلة في اسرع وقت ممكن! \27[0;m\n")
 os.exit()
@@ -148,7 +148,7 @@ bot_id = sudos.bot_id
 FAEDER = sudos.bot_id
 SUDOUSERNAME = sudos.username
 tokenbot = Token:read('*a')
-name_bot = (faederdx1:get(FAEDER..'name_bot') or 'فايدر')
+U56RRDBOT = (faederdx1:get(FAEDER..'U56RRDBOT') or 'فايدر')
 SudoFaeder = SUDOUSERNAME:gsub('@','') 
 SudoFaeder = SudoFaeder:gsub([[\_]],'_')
 ----------------------------------------------------------
@@ -1486,7 +1486,7 @@ local start = faederdx1:get(FAEDER.."Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = "❅∫ مرحبا انا بوت اسمي { "..name_bot.." }\n❅∫ اختصاصي حماية المجموعات\n❅∫ من التفليش والسبام والخخ .. . ،\n❅∫ قم برفعي ادمن في مجموعتك وارسل ( تفعيل )\n❅∫ سيتم رفع الادمنيه والمنشئ تلقائيا"
+Start_Source = "❅∫ مرحبا انا بوت اسمي { "..U56RRDBOT.." }\n❅∫ اختصاصي حماية المجموعات\n❅∫ من التفليش والسبام والخخ .. . ،\n❅∫ قم برفعي ادمن في مجموعتك وارسل ( تفعيل )\n❅∫ سيتم رفع الادمنيه والمنشئ تلقائيا"
 end
 send_inline(msg.chat_id_,Start_Source,nil,inline)
 send_inline(msg.chat_id_,Sudo_Welcome,key)
@@ -1521,7 +1521,7 @@ local start = faederdx1:get(FAEDER.."Start:Bot")
 if start then 
 Start_Source = start
 else
-Start_Source = "❅∫ مرحبا انا بوت اسمي { "..name_bot.." }\n❅∫ اختصاصي حماية المجموعات\n❅∫ من التفليش والسبام والخخ .. . ،\n❅∫ قم برفعي ادمن في مجموعتك وارسل ( تفعيل )\n❅∫ سيتم رفع الادمنيه والمنشئ تلقائيا"
+Start_Source = "❅∫ مرحبا انا بوت اسمي { "..U56RRDBOT.." }\n❅∫ اختصاصي حماية المجموعات\n❅∫ من التفليش والسبام والخخ .. . ،\n❅∫ قم برفعي ادمن في مجموعتك وارسل ( تفعيل )\n❅∫ سيتم رفع الادمنيه والمنشئ تلقائيا"
 end
 faederdx(msg.chat_id_, msg.id_, 1, Start_Source, 1, 'md')
 return false
@@ -3418,7 +3418,7 @@ local faeder = faederdx1:get('faeder:'..bot_id..'namebot'..msg.sender_user_id_..
 if faeder == 'msg' then
 faederdx(msg.chat_id_, msg.id_, 1, "❅∫ تم حفظ اسم البوت الجديد ،", 1, "md")
 faederdx1:set('faeder:'..bot_id..'namebot'..msg.sender_user_id_..'', 'no')
-faederdx1:set('faeder:'..bot_id..'name_bot', text)
+faederdx1:set('faeder:'..bot_id..'U56RRDBOT', text)
 return false 
 end end
 --     By Developer Faeder     -- 
@@ -3525,8 +3525,8 @@ if text == 'فرخ' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_
 if text == 'سورس فايدر' or text == 'سورس ديف فايدر' or text == 'سورس انور'  then if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then faeder =  "تااج وباجج حبيي ، 😹🌝" else faeder = '' end faederdx(msg.chat_id_, msg.id_, 1, faeder, 1, 'md') end 
 if text == 'احبك' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder = { "ٰجذابةه تريدد تقطكك  ، 😹💘","ءني هم احبكك يعمري ، ☹️💘" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
 if text == 'احبج' then  if not faederdx1:get(FAEDER..'bot:rep:mute'..msg.chat_id_) then local faeder =  { "ٰجذابب يريد يطككج ، 😹💘","ااخ بسس اموتت بيكك ، 🥺💘" } faederdx12 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faederdx12] , 1, 'md') end end
-if text == 'بوت' and faeder11(msg) then  name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'فايدر')  local faeder = {  "أسمي "..name_bot.." يعمري ",  "أسمي "..name_bot.." يقميل ",  "تره أسمي "..name_bot.." كافي بوت ",  "انت البوت لك اسمي "..name_bot.." ", }  faeder2 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  end
-if (text and text == (faederdx1:get('faeder:'..bot_id..'name_bot') or 'فايدر')) then name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'فايدر') local namebot = {  'عيون '..name_bot..' العسليات ؛🤭☄',  'اطلقق من يصيح '..name_bot..' ؛😻💗',  'وياك '..name_bot..' عمري أمرني 🌾' } name = math.random(#namebot) faederdx(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'md') return false end
+if text == 'بوت' and faeder11(msg) then  U56RRDBOT = (faederdx1:get('faeder:'..bot_id..'U56RRDBOT') or 'فايدر')  local faeder = {  "أسمي "..U56RRDBOT.." يعمري ",  "أسمي "..U56RRDBOT.." يقميل ",  "تره أسمي "..U56RRDBOT.." كافي بوت ",  "انت البوت لك اسمي "..U56RRDBOT.." ", }  faeder2 = math.random(#faeder) faederdx(msg.chat_id_, msg.id_, 1, faeder[faeder2] , 1, 'md')  end
+if (text and text == (faederdx1:get('faeder:'..bot_id..'U56RRDBOT') or 'فايدر')) then U56RRDBOT = (faederdx1:get('faeder:'..bot_id..'U56RRDBOT') or 'فايدر') local namebot = {  'عيون '..U56RRDBOT..' العسليات ؛🤭☄',  'اطلقق من يصيح '..U56RRDBOT..' ؛😻💗',  'وياك '..U56RRDBOT..' عمري أمرني 🌾' } name = math.random(#namebot) faederdx(msg.chat_id_, msg.id_, 1, namebot[name] , 1, 'md') return false end
 --     By Developer Faeder     -- 
 if text =='نقاطي' and faeder11(msg) then 
 if tonumber((faederdx1:get(FAEDER..'bot:add:num'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
@@ -4290,8 +4290,8 @@ resolve_username(username,unbanusername)
 end 
 --     By Developer Faeder     -- 
  if is_admin(msg.sender_user_id_, msg.chat_id_) then
-name_bot = (faederdx1:get('faeder:'..bot_id..'name_bot') or 'فايدر')
-if text ==  ""..name_bot..' غادر' and faeder11(msg) then
+U56RRDBOT = (faederdx1:get('faeder:'..bot_id..'U56RRDBOT') or 'فايدر')
+if text ==  ""..U56RRDBOT..' غادر' and faeder11(msg) then
 chat_leave(msg.chat_id_, bot_id)
 faederdx1:srem(FAEDER.."bot:groups",msg.chat_id_)
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم مغادره المجموعه وحذف بياناتها ، ', 1, 'md')
@@ -9162,7 +9162,7 @@ if text and text == 'مسح اسم البوت' then
 if not is_leader(msg) then
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ للمطور الاساسي فقط ', 1, 'md')
 else
-faederdx1:del('faeder:'..bot_id..'name_bot')
+faederdx1:del('faeder:'..bot_id..'U56RRDBOT')
 faederdx(msg.chat_id_, msg.id_, 1, '❅∫ تم حذف اسم البوت ', 1, 'html')
 end end 
 --     By Developer Faeder     -- 
